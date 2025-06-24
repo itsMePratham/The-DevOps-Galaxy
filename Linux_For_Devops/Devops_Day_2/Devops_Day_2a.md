@@ -242,3 +242,82 @@ zcat file.txt.gz
 |---------|---------|----------|---------|
 | `cat` | View normal file | `.txt`, `.log`, etc. | `cat notes.txt` |
 | `zcat` | View compressed file | `.gz` files | `zcat log.txt.gz` |
+
+
+
+
+
+
+# Linux Commands - Detailed Notes
+
+## 1. `touch`
+- **Purpose**: 
+  - Creates a new, empty file.
+  - Updates the timestamp of an existing file (modification and access times).
+- **Syntax**: 
+  ```bash
+  touch filename
+  ```
+- **Example**:
+  ```bash
+  touch myfile.txt
+  ```
+  Creates an empty file named `myfile.txt` if it doesn't already exist.
+
+---
+
+## 2. `head`
+- **Purpose**: 
+  - Displays the first N lines of a file (default is 10 lines).
+- **Syntax**: 
+  ```bash
+  head filename
+  head -n 5 filename  # Show first 5 lines
+  ```
+- **Example**:
+  ```bash
+  head data.txt
+  ```
+  Shows the first 10 lines of `data.txt`.
+
+---
+
+## 3. `tail` and `tail -f`
+- **Purpose**:
+  - `tail`: Shows the last N lines of a file (default is 10).
+  - `tail -f`: Continuously monitors the file for new lines (real-time).
+- **Syntax**:
+  ```bash
+  tail filename
+  tail -n 20 filename   # Show last 20 lines
+  tail -f logfile.txt   # Follow the file as it grows
+  ```
+- **Example**:
+  ```bash
+  tail -f /var/log/syslog
+  ```
+  Useful for monitoring logs in real time.
+
+---
+
+## 4. `less` and `more`
+- **Purpose**: 
+  - View large files one page at a time.
+  - `less` is more advanced (supports scrolling and searching).
+- **Syntax**:
+  ```bash
+  less filename
+  more filename
+  ```
+- **Controls for `less`**:
+  - `q` to quit
+  - `/search_term` to search
+  - `↑/↓` to scroll
+- **Example**:
+  ```bash
+  less bigfile.txt
+  ```
+
+---
+
+✅ These commands are essential for working with files in the Linux command-line environment.
